@@ -65,7 +65,8 @@ end
 % Adjoint Model
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Calculate adjoint plume model
-[dJdE_AD] = plume3ADM(x,t,1,D,B);
+dE_AD = 1;
+[dJdE_AD] = plume3ADM(x,t,dE_AD,D,B);
 
 % Plot differnential cost function over entire timespace
 pl_AD = plot(t,dJdE_AD, 'm');
